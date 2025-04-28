@@ -1,7 +1,7 @@
 
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { HomeIcon, ListTodo, Settings, UserIcon } from "lucide-react";
+import { HomeIcon, ListTodo, Settings, LogOut } from "lucide-react";
 
 interface TaskLayoutProps {
   children: ReactNode;
@@ -44,8 +44,8 @@ export function TaskLayout({ children }: TaskLayoutProps) {
                 to="#"
                 className="flex items-center text-gray-700 hover:bg-purple-50 hover:text-purple-600 px-4 py-3 rounded-md"
               >
-                <UserIcon className="h-5 w-5" />
-                <span className="ml-3 hidden md:block">Пользователи</span>
+                <Settings className="h-5 w-5" />
+                <span className="ml-3 hidden md:block">Настройки</span>
               </Link>
             </li>
             <li>
@@ -53,8 +53,8 @@ export function TaskLayout({ children }: TaskLayoutProps) {
                 to="#"
                 className="flex items-center text-gray-700 hover:bg-purple-50 hover:text-purple-600 px-4 py-3 rounded-md"
               >
-                <Settings className="h-5 w-5" />
-                <span className="ml-3 hidden md:block">Настройки</span>
+                <LogOut className="h-5 w-5" />
+                <span className="ml-3 hidden md:block">Выйти</span>
               </Link>
             </li>
           </ul>
